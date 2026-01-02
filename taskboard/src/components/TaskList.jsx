@@ -18,7 +18,7 @@ export default function TaskList({tasks, updateTask, deleteTask}) {
           <div>
             <button onClick={()=>{toggleComplete(index)}}>
               {task.completed ? "Undo" : "Complete"}</button>
-            <button>Delete</button>
+            <button onClick={()=>deleteTask(index)}>Delete</button>
           </div>
         </li>
       ))}
