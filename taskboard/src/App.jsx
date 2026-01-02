@@ -1,6 +1,7 @@
 import TaskForm from "./components/TaskForm"
 import TaskList from "./components/TaskList"
 import ProgressTracker from "./components/ProgressTracker"
+import './Style.css'
 
 import { useEffect, useState } from 'react'
  
@@ -41,7 +42,7 @@ export default function App() {
       <TaskList tasks = {tasks} 
       updateTask = {updateTask} 
       deleteTask = {deleteTask}/>
-      <ProgressTracker/>
+      <ProgressTracker tasks = {tasks}/>
       {tasks.length>0 && (<button className="clear-btn"
       onClick={clearTasks}>Clear All Tasks</button>)}
    </div>

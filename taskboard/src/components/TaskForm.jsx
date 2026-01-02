@@ -23,7 +23,7 @@ export default function TaskForm({addTask}) {
            value={task} 
            onChange={(e)=>setTask(e.target.value)}/>
           <span><button type='submit'>Add task</button></span>
-          <h1>{task} {priority} {category}</h1>
+          {/* <h1>{task} {priority} {category}</h1> */}
         </div>
         <div id='btns'>
           <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
