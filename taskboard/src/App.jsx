@@ -14,8 +14,19 @@ export default function App() {
 
 
     const addTask = (task) => {
-        setTasks([...tasks,task]);
+        setTasks([...tasks, task]);
     }
+
+    const updateTask = (updatedTask,  index) => {
+      const newTask = [...tasks];
+      newTask[index] = updatedTask
+      setTasks(newTask);
+    }
+
+    const deleteTask = () => {
+
+    }
+
   return (
     <div>
         <header>
@@ -23,7 +34,9 @@ export default function App() {
       <p><i>Your friendly Task Manager</i></p>
       </header>
       <TaskForm addTask = {addTask}/>
-      <TaskList/>
+      <TaskList tasks = {tasks} 
+      updateTask = {updateTask} 
+      deleteTask = {deleteTask}/>
       <ProgressTracker/>
       <button>Clear All Tasks</button>
     </div>
