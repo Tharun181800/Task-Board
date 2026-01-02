@@ -33,10 +33,10 @@ export default function App() {
     }
 
   return (
-    <div>
+    <div className="app-wrapper">
         <header>
-      <h1>Task Board</h1>
-      <p><i>Your friendly Task Manager</i></p>
+      <h1>TaskBoard</h1>
+      <p>Your friendly Task Manager</p>
       </header>
       <TaskForm addTask = {addTask}/>
       <TaskList tasks = {tasks} 
@@ -44,7 +44,7 @@ export default function App() {
       deleteTask = {deleteTask}/>
       <ProgressTracker tasks = {tasks}/>
       {tasks.length>0 && (<button className="clear-btn"
-      onClick={clearTasks}>Clear All Tasks</button>)}
+      onClick={clearTasks}>Clear All Tasks</button>)}  
    </div>
   )
 }

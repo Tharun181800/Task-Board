@@ -10,10 +10,10 @@ export default function TaskList({tasks, updateTask, deleteTask}) {
     <ul className='task-list'>
       {tasks.map((task, index) =>  (
         <li key={index} className= {task.completed ? 'completed' : ''}>
-          <div>
-            <span>{task.text}</span>
-            <small>{task.priority} ,
-               {task.category}</small>
+          <div className='task-text'>
+            <span>{task.text} </span>
+            <small>({task.priority} ,
+               {task.category})</small>
           </div>
           <div>
             <button onClick={()=>{toggleComplete(index)}}>

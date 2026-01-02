@@ -26,7 +26,7 @@ export default function TaskForm({addTask}) {
           {/* <h1>{task} {priority} {category}</h1> */}
         </div>
         <div id='btns'>
-          <select value={priority} onChange={(e)=>setPriority(e.target.value)}>
+          <select className="priority-select priority-medium" value={priority} onChange={(e)=>setPriority(e.target.value)}>
             <option value='high'>High</option>
             <option value='medium'>Medium</option>
             <option value='low'>Low</option>
